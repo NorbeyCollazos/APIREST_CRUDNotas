@@ -1,3 +1,8 @@
+#API REST CRUD NOTAS
+##Desarrollado en PHP
+
+A continuación se describe el funcionamiento del api rest para cada una de las operaciones del CRUD
+
 Para el envío de datos (método POST)
 
 [http://192.168.3.2/apirestcrudnotas/notas](http://192.168.3.2/apirestcrudnotas/notas)
