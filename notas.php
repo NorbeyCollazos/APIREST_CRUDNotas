@@ -20,6 +20,11 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
         header('Content-Type: application/json');
         echo json_encode($datosnota);
         http_response_code(200);
+    }else{
+        $listaNotas = $_notas->listaNotas();
+        header('Content-Type: application/json');
+        echo json_encode($listaNotas);
+        http_response_code(200);
     }
     
 
