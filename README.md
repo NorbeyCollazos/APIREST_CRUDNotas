@@ -22,6 +22,12 @@ Para obtener la lista de datos (método GET)
 
 [http://192.168.3.2/apirestcrudnotas/notas?page=1](http://192.168.3.2/apirestcrudnotas/notas?page=1)              (se obtiene todos los datos con paginación de 100 en 100)
 
+
+Para ver el detalle del registro (método GET) le pasamos el id del registro por parámetro en la url
+
+[http://192.168.3.2/apirestcrudnotas/notas?id=](http://192.168.3.2/apirestcrudnotas/notas?id=1)
+
+
 Para editar los datos (método PUT)
 
 [http://192.168.3.2/apirestcrudnotas/notas](http://192.168.3.2/apirestcrudnotas/notas)

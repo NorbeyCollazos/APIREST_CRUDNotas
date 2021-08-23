@@ -639,7 +639,7 @@ blockquote {
  }</code></pre><p id="b17a8034-09ef-4996-812c-7120d6e89ce4" class="">
 </p><p id="ee87f8c2-0bd0-4389-a644-d6f034d4feae" class="">
 </p><p id="245ed0fd-7223-4c94-8b9a-543447796f07" class="">Para obtener la lista de datos (método GET)</p><p id="0c4177a7-65f9-4168-9332-69de278d6685" class=""><a href="http://192.168.3.2/apirestcrudnotas/notas">http://192.168.3.2/apirestcrudnotas/notas</a>              (se obtiene todos los datos)</p><p id="c884e0f7-8a43-4eb9-a530-ba2a8a425d1d" class=""><a href="http://192.168.3.2/apirestcrudnotas/notas?page=1">http://192.168.3.2/apirestcrudnotas/notas?page=1</a>              (se obtiene todos los datos con paginación de 100 en 100)</p><p id="6394a1c5-9244-4fae-add9-4c1c1d488fa7" class="">
-</p><p id="62b0e04d-383c-4ca4-9a7f-48d823fae50d" class="">
+</p><p id="6cda1abe-2a27-4fe1-86f3-c5e744dc1e8d" class="">Para ver el detalle del registro (método GET) le pasamos el id del registro por parámetro en la url</p><p id="23bfc6d5-f8f6-48b5-abf9-8c9d4dedb7a7" class=""><a href="http://192.168.3.2/apirestcrudnotas/notas?id=1">http://192.168.3.2/apirestcrudnotas/notas?id=</a></p><p id="4642cabe-068d-4ff0-93b6-b2a995dc92ac" class="">
 </p><p id="30b8a7fd-63e4-4433-a21a-e235540297a5" class="">Para editar los datos (método PUT)</p><p id="70c3edd0-463f-4603-8d2d-254e74aa415c" class=""><a href="http://192.168.3.2/apirestcrudnotas/notas">http://192.168.3.2/apirestcrudnotas/notas</a></p><p id="ecc80b7e-d6ee-4520-b6a0-a09d2da7b681" class="">se envían los datos en formato json de la siguiente manera</p><pre id="f6f0f527-a6de-4753-896d-64a0d264d3d0" class="code"><code>{
 	&quot;id&quot;: &quot;1&quot;,        
 	&quot;titulo&quot;: &quot;titulo de la nota&quot;,
@@ -647,4 +647,5 @@ blockquote {
  }</code></pre><p id="5fd3569f-ba0c-4cbd-911a-e60217e32c58" class="">
 </p><p id="ef9ec1aa-0473-4e8f-a453-707d9039b7eb" class="">Para eliminar los datos (método DELETE)</p><p id="fd926816-1e83-4e7f-82b3-0adc60075fdd" class=""><a href="http://192.168.3.2/apirestcrudnotas/notas">http://192.168.3.2/apirestcrudnotas/notas</a></p><p id="159cb261-b44b-476e-bbeb-5cfbfa806431" class="">se envían los datos en formato json de la siguiente manera</p><pre id="a34ae0c8-9c0e-4a6d-9b5b-3ff91695caf7" class="code"><code>{
 	&quot;id&quot;: &quot;1&quot;
- }</code></pre><p id="81d32649-3b57-412f-9646-45d1c1b156f0" class="">También se puede enviar por el header</p></div></article></body></html>
+ }</code></pre><p id="81d32649-3b57-412f-9646-45d1c1b156f0" class="">También se puede enviar por el header</p><p id="ab0530f8-6345-4481-8b22-325e27b7935c" class="">
+</p></div></article></body></html>
