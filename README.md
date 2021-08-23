@@ -5,7 +5,7 @@ A continuación se describe el funcionamiento del api rest para cada una de las 
 
 Para el envío de datos (método POST)
 
-[http://192.168.3.2/apirestcrudnotas/notas](http://192.168.3.2/apirestcrudnotas/notas)
+[http://apirestcrudnotas.ncrdesarrollo.com/notas](http://apirestcrudnotas.ncrdesarrollo.com/notas)
 
 se envían los datos en formato json de la siguiente manera
 
@@ -18,19 +18,19 @@ se envían los datos en formato json de la siguiente manera
 
 Para obtener la lista de datos (método GET)
 
-[http://192.168.3.2/apirestcrudnotas/notas](http://192.168.3.2/apirestcrudnotas/notas)              (se obtiene todos los datos)
+[http://apirestcrudnotas.ncrdesarrollo.com/notas](http://apirestcrudnotas.ncrdesarrollo.com/notas)              (se obtiene todos los datos)
 
-[http://192.168.3.2/apirestcrudnotas/notas?page=1](http://192.168.3.2/apirestcrudnotas/notas?page=1)              (se obtiene todos los datos con paginación de 100 en 100)
+[http://apirestcrudnotas.ncrdesarrollo.com/notas?page=1](http://apirestcrudnotas.ncrdesarrollo.com/notas?page=1)              (se obtiene todos los datos con paginación de 100 en 100)
 
 
 Para ver el detalle del registro (método GET) le pasamos el id del registro por parámetro en la url
 
-[http://192.168.3.2/apirestcrudnotas/notas?id=](http://192.168.3.2/apirestcrudnotas/notas?id=1)
+[http://apirestcrudnotas.ncrdesarrollo.com/notas?id=](http://apirestcrudnotas.ncrdesarrollo.com/notas?id=1)
 
 
 Para editar los datos (método PUT)
 
-[http://192.168.3.2/apirestcrudnotas/notas](http://192.168.3.2/apirestcrudnotas/notas)
+[http://apirestcrudnotas.ncrdesarrollo.com/notas](http://apirestcrudnotas.ncrdesarrollo.com/notas)
 
 se envían los datos en formato json de la siguiente manera
 
@@ -44,7 +44,7 @@ se envían los datos en formato json de la siguiente manera
 
 Para eliminar los datos (método DELETE)
 
-[http://192.168.3.2/apirestcrudnotas/notas](http://192.168.3.2/apirestcrudnotas/notas)
+[http://apirestcrudnotas.ncrdesarrollo.com/notas](http://apirestcrudnotas.ncrdesarrollo.com/notas)
 
 se envían los datos en formato json de la siguiente manera
 
