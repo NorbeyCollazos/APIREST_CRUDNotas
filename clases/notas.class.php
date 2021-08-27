@@ -9,6 +9,7 @@ class notas extends conexion
     private $notasid = "";
     private $titulo = "";
     private $nota = "";
+    private $imagen = "";
 
 
     public function listaNotas($pagina = 1)
@@ -46,6 +47,10 @@ class notas extends conexion
             /*if (isset($datos['telefono'])) {
                 $this->telefono = $datos['telefono'];
             }*/
+            if (isset($datos['imagen'])) {
+                $resp = $this->procesarImagen($datos['imagen']);
+                $this->imagen = $resp;
+            }
             
             $resp = $this->insertarNota();
             if ($resp) {
@@ -63,9 +68,9 @@ class notas extends conexion
 
     private function insertarNota()
     {
-        $query = "INSERT INTO " . $this->table . " (titulo, nota)
+        $query = "INSERT INTO " . $this->table . " (titulo, nota, imagen)
         values
-        ('" . $this->titulo . "','" . $this->nota ."')";
+        ('" . $this->titulo . "','" . $this->nota . "','" . $this->imagen ."')";
         $resp = parent::nonQueryId($query);
         if ($resp) {
             return $resp;
@@ -86,6 +91,11 @@ class notas extends conexion
             $this->notasid = $datos['id'];
             $this->titulo = $datos['titulo'];
             $this->nota = $datos['nota'];
+
+            if (isset($datos['imagen'])) {
+                $resp = $this->procesarImagen($datos['imagen']);
+                $this->imagen = $resp;
+            }
             
             $resp = $this->modificarNota();
             if ($resp) {
@@ -102,7 +112,7 @@ class notas extends conexion
 
     private function modificarNota()
     {
-        $query = "UPDATE " . $this->table . " SET titulo ='" . $this->titulo . "', nota = '" . $this->nota .
+        $query = "UPDATE " . $this->table . " SET titulo ='" . $this->titulo . "', nota = '" . $this->nota . "', imagen = '" . $this->imagen .
             "' WHERE id = '" . $this->notasid . "'";
         $resp = parent::nonQuery($query);
         if ($resp >= 1) {
@@ -145,4 +155,21 @@ class notas extends conexion
             return 0;
         }
     }
+
+
+    private function procesarImagen($img){
+        $direccion = dirname(__DIR__) . "\public\imagenes\\";
+        $partes = explode(";base64,",$img);
+        //$extension = explode('/',mime_content_type($img))[1];
+        $extension = "jpeg";
+        //$imagen_base64 = base64_decode($partes[1]);
+        $imagen_base64 = base64_decode($img);
+        $file = $direccion . uniqid() . "." . $extension;
+        file_put_contents($file,$imagen_base64);
+        $nuevadireccion = str_replace('\\','/',$file);
+        //si se quiere realizar otras modificaciones como imagen mas pequeña se haace aqui
+
+        return $nuevadireccion;
+    }
+
 }

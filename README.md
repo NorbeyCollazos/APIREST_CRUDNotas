@@ -12,7 +12,8 @@ se envían los datos en formato json de la siguiente manera
 ```json
 {
         "titulo": "titulo de la nota",
-        "nota": "texto de la nota"
+        "nota": "texto de la nota",
+		"imagen": "se debe enviar en formato base64"
  }
 ```
 
@@ -38,7 +39,8 @@ se envían los datos en formato json de la siguiente manera
 {
 	"id": "1",        
 	"titulo": "titulo de la nota",
-	"nota": "texto de la nota"
+	"nota": "texto de la nota",
+	"imagen": "se debe enviar en formato base64"
  }
 ```
 
