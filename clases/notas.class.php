@@ -158,15 +158,17 @@ class notas extends conexion
 
 
     private function procesarImagen($img){
-        $direccion = dirname(__DIR__) . "\public\imagenes\\";
+        $dominio = "http://apirestcrudnotas.ncrdesarrollo.com";
+        $direccion = dirname(__DIR__) . "/public/imagenes/";
         $partes = explode(";base64,",$img);
         //$extension = explode('/',mime_content_type($img))[1];
         $extension = "jpeg";
         //$imagen_base64 = base64_decode($partes[1]);
         $imagen_base64 = base64_decode($img);
-        $file = $direccion . uniqid() . "." . $extension;
-        file_put_contents($file,$imagen_base64);
-        $nuevadireccion = str_replace('\\','/',$file);
+        $file =  uniqid() . "." . $extension;
+        file_put_contents($direccion .$file,$imagen_base64);
+        //$nuevadireccion = str_replace('\\','/',$file);
+        $nuevadireccion = $dominio."/public/imagenes/".$file;
         //si se quiere realizar otras modificaciones como imagen mas pequeña se haace aqui
 
         return $nuevadireccion;
