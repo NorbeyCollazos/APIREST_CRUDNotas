@@ -1,9 +1,9 @@
 {
     "conexion":{
         "server": "localhost",
-        "user": "root",
-        "password": "",
-        "database": "apirestcrudnotas",
-        "port": "3306"
+        "user": "u158619408_apicrudnotas",
+        "password": "Ncr1077866001",
+        "database": "u158619408_apicrudnotas",
+        "port": "21"
     }
 }
